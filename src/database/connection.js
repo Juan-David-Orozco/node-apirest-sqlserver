@@ -12,7 +12,7 @@ const dbConfig = {
   }
 }
 
-const connectDB = async () => {
+export const connectDB = async () => {
   try {
     const pool = await sql.connect(dbConfig)
     return pool
@@ -21,4 +21,4 @@ const connectDB = async () => {
   }
 }
 
-connectDB()
+export { sql }
